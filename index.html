@@ -224,6 +224,14 @@
     /* ---------- Pulse dot ---------- */
     @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.4; } }
     .pulse { animation: pulse 2.5s infinite; }
+
+    /* ---------- Modal Typography ---------- */
+    #wp-content h3 { font-size: 1.25rem; font-weight: 800; color: #0D1B4B; margin: 1.5rem 0 0.5rem; }
+    #wp-content h4 { font-size: 1.05rem; font-weight: 700; color: #2448B5; margin: 1.2rem 0 0.5rem; }
+    #wp-content p { font-size: 0.95rem; color: #3D527A; line-height: 1.7; margin-bottom: 1rem; }
+    #wp-content ul { list-style: none; margin-bottom: 1.5rem; padding-left: 0; }
+    #wp-content li { position: relative; padding-left: 1.2rem; font-size: 0.95rem; color: #3D527A; line-height: 1.6; margin-bottom: 0.5rem; }
+    #wp-content li::before { content: '•'; position: absolute; left: 0; color: #2448B5; font-weight: bold; }
   </style>
 </head>
 <body>
@@ -236,6 +244,8 @@
       <a href="#crisis">The Crisis</a>
       <a href="#gel">The Gel</a>
       <a href="#science">Science</a>
+      <!-- NEW WHITE PAPER NAV LINK FIXING THE JUMP -->
+      <a href="javascript:void(0);" onclick="document.getElementById('wp-modal').style.display='flex';">White Paper</a>
       <a href="#clinicians">Clinicians</a>
     </div>
     <a href="#partner" class="btn-navy" id="nav-cta">
@@ -639,8 +649,8 @@
       <a href="https://www.tiktok.com/@eutinol" target="_blank" aria-label="TikTok">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.01.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.78-1.15 5.54-3.33 7.39-2.21 1.89-5.32 2.65-8.15 1.94-2.73-.68-5.11-2.63-6.15-5.26-1.07-2.67-.78-5.83.74-8.24 1.43-2.32 3.95-3.88 6.64-4.25 1.34-.18 2.71-.11 4.02.26v4.11c-1.3-.39-2.76-.32-3.95.27-1.28.64-2.31 1.85-2.66 3.22-.38 1.5-.1 3.16.81 4.39.92 1.25 2.5 2 4.04 2.01 1.54.02 3.06-.65 4.1-1.76 1.05-1.13 1.55-2.7 1.5-4.26-.05-5.46-.02-10.92-.02-16.38z"/></svg>
       </a>
-      <!-- NEW WHITE PAPER ICON TRIGGERING MODAL -->
-      <a href="#" onclick="document.getElementById('wp-modal').style.display='flex'; return false;" aria-label="White Paper">
+      <!-- FOOTER WHITE PAPER ICON (Optional, but kept matching your design) -->
+      <a href="javascript:void(0);" onclick="document.getElementById('wp-modal').style.display='flex';" aria-label="White Paper">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" stroke-linecap="round" stroke-linejoin="round">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
           <polyline points="14 2 14 8 20 8"></polyline>
@@ -656,6 +666,106 @@
     <p class="foot-note">For professional clinical use only.</p>
   </div>
 </footer>
+
+<!-- ═══════════════ WHITE PAPER MODAL (TEXT EMBEDDED) ═══════════════ -->
+<div id="wp-modal" style="display:none; position:fixed; inset:0; background:rgba(13,27,75,.8); z-index:100; align-items:center; justify-content:center; padding: 2rem;">
+  <div style="background:#fff; border-radius: 24px; padding: 3rem; max-width: 800px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; text-align: left;">
+    <button onclick="document.getElementById('wp-modal').style.display='none'" style="position:absolute; top: 1.5rem; right: 1.5rem; background:none; border:none; font-size: 1.5rem; cursor:pointer;">&times;</button>
+    
+    <div id="wp-content">
+      <h2 style="font-size: 1.8rem; font-weight: 900; color: #0D1B4B; margin-bottom: 0.5rem; border-bottom: 1px solid rgba(13,27,75,.1); padding-bottom: 0.8rem;">Eutinol Gel: A Synergistic Natural-Active Topical Therapy for Diabetic Wound Healing</h2>
+      <p style="font-size: 0.9rem; font-weight: 600; color: #5A6E9A; margin-bottom: 2rem;">Preclinical evidence and path to clinical validation</p>
+
+      <h3>1. Executive Summary</h3>
+      <p>Diabetic foot ulcers (DFUs) are among the most serious complications of diabetes mellitus, driving chronic non-healing wounds, infection, and lower-limb amputation. Existing standard-of-care dressings manage the wound environment but do not actively correct the underlying biology - persistent oxidative stress, unresolved inflammation, and cellular senescence that keeps diabetic wounds from closing.</p>
+      <p>This white paper describes Eutinol gel - the flagship product of the Eutinol team a novel topical formulation combining two naturally occurring bioactive compounds, eugenol (from clove) and quercetin (a flavonoid widely present in fruits and vegetables). Preclinical evaluation in cell-based (in vitro) models and a diabetic rat (in vivo) model shows that the two compounds act synergistically: the combination outperforms either compound alone at substantially lower concentrations across four therapeutic pillars antioxidant, anti-inflammatory, anti-senescence, and pro-proliferative activity and accelerates wound closure in diabetic animals to a level comparable with a widely used commercial hydrogel (Intrasite).</p>
+
+      <h3>2. The Unmet Clinical Need</h3>
+      <h4>2.1 The scale of the problem</h4>
+      <p>Diabetes is a global health emergency. According to the IDF Diabetes Atlas (11th edition, 2025), 589 million adults aged 20-79 are living with diabetes approximately 1 in 9 adults worldwide projected to rise to 853 million by 2050.</p>
+      <p>Diabetic foot complications follow in lockstep:</p>
+      <ul>
+        <li>An estimated 4-10% of people with diabetes have an active foot ulcer at any time, and lifetime incidence of DFU reaches up to 25-34%.</li>
+        <li>DFUs precede the large majority of diabetes-related lower-limb amputations.</li>
+        <li>Prognosis is sobering: 5-year mortality after a DFU is approximately 30% comparable to many cancers and exceeds 70% after major amputation.</li>
+      </ul>
+
+      <h4>2.2 Why diabetic wounds fail to heal</h4>
+      <p>Wound healing proceeds through overlapping phases of inflammation, proliferation, and remodelling. In diabetes, this orderly process breaks down. Hyperglycaemia drives the accumulation of advanced glycation end products (AGEs) and reactive oxygen species (ROS), which induce cellular senescence - the irreversible arrest of cell division. Senescent cells in turn secrete a senescence-associated secretory phenotype (SASP) - a cocktail of pro-inflammatory cytokines that amplifies inflammation, suppresses fibroblast function, and stalls healing. The result is a chronic wound stuck in a prolonged inflammatory state: high oxidative stress, elevated inflammatory cytokines (IL-6, TNF-a), impaired keratinization and re-epithelialization, and delayed granulation tissue formation.</p>
+
+      <h4>2.3 Gaps in current care</h4>
+      <p>Guideline-based care for DFUs centres on offloading, debridement, infection control, and modern dressings such as hydrogels. These are effective at managing the wound bed but are largely passive: they do not directly address the oxidative, inflammatory, and senescence-driven biology that sustains the chronic wound. There is no single gold-standard therapy, and treatment must be tailored to each wound - leaving a clear, unmet need for therapies that actively promote healing by targeting these underlying mechanisms.</p>
+
+      <h3>3. The Innovation: Eutinol Gel</h3>
+      <p>Eutinol gel is a topical gel formulation containing eugenol and quercetin a fixed-dose combination of two natural bioactives selected for their complementary pharmacology:</p>
+      <ul>
+        <li>Eugenol, a phenylpropanoid found abundantly in clove (Syzygium aromaticum), has a long history of topical use as an antiseptic and analgesic agent.</li>
+        <li>Quercetin, a flavonol found in citrus, leafy vegetables, seeds, and nuts, is a well-characterised antioxidant and anti-inflammatory molecule reported to accelerate diabetic wound repair by modulating macrophage behaviour.</li>
+        <li>Both compounds are listed by the International Agency for Research on Cancer (IARC) as not classifiable as carcinogenic to humans, supporting a favourable safety profile for topical use.</li>
+      </ul>
+      <p>The formulation rationale is synergy: the two compounds engage complementary and partially overlapping pathways, so a combination may achieve stronger biological effect than either compound alone - potentially at lower doses, with a correspondingly lower risk of irritation or side effects. Eutinol is the first fixed-dose topical gel to combine eugenol and quercetin for diabetic wound healing a pioneering combination whose effects were validated in both in vitro and in vivo models . The gel is designed for once-daily topical application, formulated to be stable, homogeneous, and skin-compatible (physicochemical characterisation, including pH, stability, and uniformity, was performed as part of development). Details of the proprietary formulation composition are not disclosed in this document.</p>
+
+      <h3>4. Mechanisms of Action: Four Pillars of Wound Healing Activity</h3>
+      <p>Preclinical evaluation in human dermal fibroblasts and RAW264.7 macrophage cells (a widely used model of the inflammatory response) identified four complementary mechanisms:</p>
+
+      <h4>4.1 Anti-inflammatory</h4>
+      <ul>
+        <li>Marked reduction of pro-inflammatory cytokines IL-6 and TNF-a in inflamed macrophages with the combination achieving the strongest suppression at the lowest concentration tested.</li>
+        <li>Downregulation of CXCL8/IL-8 signalling (including its receptors CXCR1/CXCR2), a key driver of sustained inflammatory recruitment in chronic wounds.</li>
+      </ul>
+
+      <h4>4.2 Antioxidant</h4>
+      <p>Significant reduction of hydrogen peroxide (H2O2) - a major reactive oxygen species elevated under diabetic hyperglycaemia - in inflamed cells, with the combination outperforming single compounds.</p>
+
+      <h4>4.3 Anti-senescence</h4>
+      <p>Reduction of UVB-induced cellular senescence (measured by B-galactosidase staining), countering the AGE- and stress-driven senescence that impairs diabetic wound repair.</p>
+
+      <h4>4.4 Pro-proliferative and pro-regenerative</h4>
+      <ul>
+        <li>Enhanced fibroblast proliferation - the cells responsible for depositing extracellular matrix, contracting the wound, and rebuilding the dermis.</li>
+        <li>Accelerated wound closure in an in vitro scratch-wound model, and increased expression of remodelling-associated genes consistent with tissue repair.</li>
+      </ul>
+
+      <h3>5. Preclinical Evidence</h3>
+      <h4>5.1 In vitro: synergy at low concentration</h4>
+      <p>In cell-based assays, eugenol and quercetin each promoted fibroblast proliferation and wound closure on their own. The combination showed superior effects at a fraction of the dose:</p>
+      <ul>
+        <li>Fibroblast proliferation was enhanced to a similar or greater extent by the combination at ~200 ng/mL as by each compound alone at 6.25 ug/mL - a >30-fold lower active concentration.</li>
+        <li>The combination produced the highest wound closure rate in the scratch-wound model.</li>
+        <li>In inflamed macrophages, the combination reduced H2O2 by ~56% (versus ~24-30% for either compound alone) and cut IL-6 and TNF-a levels substantially more than single-compound treatments.</li>
+        <li>Senescent cell levels were markedly lower with the combination than with either compound alone.</li>
+      </ul>
+
+      <h4>5.2 In vivo: accelerated healing in diabetic rats</h4>
+      <p>In a streptozotocin-induced type 2 diabetic rat model with full-thickness excisional wounds, once-daily topical application of Eutinol gel for 14 days:</p>
+      <ul>
+        <li>Accelerated wound contraction - reaching ~62% by day 14, versus ~47% in untreated diabetic controls, and comparable to the commercial hydrogel comparator (Intrasite).</li>
+        <li>Improved keratinization and epithelialization hallmarks of a well-formed, healed epidermal barrier.</li>
+        <li>Supported fibroblast proliferation and granulation tissue formation, with no fibrinoid necrosis observed in treated tissues.</li>
+        <li>Showed no abnormal findings in gross necropsy of vital organs, consistent with a favourable local safety profile.</li>
+      </ul>
+
+      <h3>6. Significance and Positioning</h3>
+      <ul>
+        <li>Mechanism-based, not just wound-bed management: Eutinol gel actively targets the oxidative-inflammatory-senescent triad that sustains diabetic wounds, complementing standard dressings.</li>
+        <li>Dose-sparing synergy: Because the combination works at very low concentrations, the formulation may achieve efficacy with a lower risk of local irritation an important consideration for fragile, chronic wound tissue.</li>
+        <li>Natural, established safety profile: Both actives are naturally occurring and are listed as not classifiable as carcinogenic to humans by IARC; no abnormal organ findings were observed in the animal study.</li>
+        <li>Practical topical format: A stable gel intended for simple once-daily application, compatible with existing wound-care workflows.</li>
+        <li>Accessibility potential: Both active ingredients are abundant natural products, offering a cost-effective path to formulation compared with growth-factor or cell-based therapies.</li>
+      </ul>
+
+      <h3>7. Next Steps: The Road to Clinical Validation</h3>
+      <p>Preclinical promise must be confirmed in humans. The pathway ahead includes:</p>
+      <ol style="margin-left: 1.5rem; color: #3D527A; margin-bottom: 1.5rem;">
+        <li>Clinical safety and efficacy studies in patients with diabetic foot ulcers, building on the existing animal data and formulation characterisation.</li>
+        <li>Regulatory engagement to define the development and registration pathway for a topical wound-care therapeutic in target markets.</li>
+        <li>Scale-up and manufacturing of the gel under pharmaceutical-grade quality systems (GMP), preserving batch-to-batch consistency and stability.</li>
+        <li>Health-economic assessment to quantify the value case reduced healing times, fewer infections, and fewer amputations against the cost of DFU care.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
 <!-- ═══════════════ JS ═══════════════ -->
 <script>
   // Navbar scroll effect
@@ -674,5 +784,3 @@
 
 </body>
 </html>
-
-      
