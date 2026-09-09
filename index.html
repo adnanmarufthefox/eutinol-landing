@@ -193,9 +193,9 @@
     .cred-name { font-size: .85rem; font-weight: 800; color: #0D1B4B; }
     .cred-sub { font-size: .73rem; color: #95A8C8; }
 
-    /* ---------- AI Section Mockups ---------- */
+    /* ---------- AI Section Mockups (Properly Calibrated) ---------- */
     .ai-phone-card {
-      background: #000;
+      background: #111827;
       border: 3px solid #1E293B;
       border-radius: 22px;
       overflow: hidden;
@@ -203,7 +203,9 @@
       box-shadow: 0 10px 30px rgba(13,27,75,0.12);
       transition: transform .3s ease, box-shadow .3s ease;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
     }
     .ai-phone-card:hover {
       transform: translateY(-6px);
@@ -212,7 +214,9 @@
     .ai-phone-card img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 16px;
     }
     .ai-feature-card {
       background: #FFFFFF;
@@ -273,7 +277,6 @@
 <!-- ═══════════════ NAVBAR ═══════════════ -->
 <nav id="navbar">
   <div class="nav-inner">
-    <!-- Navbar Logo -->
     <a href="#hero" style="display:flex; align-items:center; text-decoration:none;">
       <img src="logo.png" alt="Eutinol" style="height:38px; width:auto; object-fit:contain;" />
     </a>
@@ -281,7 +284,6 @@
       <a href="#crisis">The Crisis</a>
       <a href="#gel">The Gel</a>
       <a href="#science">Science</a>
-      <!-- New AI Navigation Item -->
       <a href="#ai">AI</a>
       <a href="javascript:void(0);" onclick="document.getElementById('wp-modal').style.display='flex';">White Paper</a>
       <a href="#clinicians">Clinicians</a>
@@ -578,7 +580,7 @@
         <!-- Screen 1 -->
         <div class="flex flex-col items-center">
           <div class="ai-phone-card w-full">
-            <img src="1.png" alt="Patient profile" onerror="this.onerror=null;this.src='1.jpg';" />
+            <img src="1" alt="Patient profile" onerror="this.onerror=null;this.src='1.png';" />
           </div>
           <div class="mt-3 text-center">
             <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">01</span>
@@ -589,7 +591,7 @@
         <!-- Screen 2 -->
         <div class="flex flex-col items-center">
           <div class="ai-phone-card w-full">
-            <img src="2.png" alt="One-tap scan" onerror="this.onerror=null;this.src='2.jpg';" />
+            <img src="2" alt="One-tap scan" onerror="this.onerror=null;this.src='2.png';" />
           </div>
           <div class="mt-3 text-center">
             <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">02</span>
@@ -600,7 +602,7 @@
         <!-- Screen 3 -->
         <div class="flex flex-col items-center">
           <div class="ai-phone-card w-full">
-            <img src="3.png" alt="Guided scanning" onerror="this.onerror=null;this.src='3.jpg';" />
+            <img src="3" alt="Guided scanning" onerror="this.onerror=null;this.src='3.png';" />
           </div>
           <div class="mt-3 text-center">
             <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">03</span>
@@ -611,7 +613,7 @@
         <!-- Screen 4 -->
         <div class="flex flex-col items-center">
           <div class="ai-phone-card w-full">
-            <img src="4.png" alt="Healing trends" onerror="this.onerror=null;this.src='4.jpg';" />
+            <img src="4" alt="Healing trends" onerror="this.onerror=null;this.src='4.png';" />
           </div>
           <div class="mt-3 text-center">
             <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">04</span>
