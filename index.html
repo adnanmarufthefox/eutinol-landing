@@ -193,6 +193,40 @@
     .cred-name { font-size: .85rem; font-weight: 800; color: #0D1B4B; }
     .cred-sub { font-size: .73rem; color: #95A8C8; }
 
+    /* ---------- AI Section Mockups ---------- */
+    .ai-phone-card {
+      background: #000;
+      border: 3px solid #1E293B;
+      border-radius: 22px;
+      overflow: hidden;
+      aspect-ratio: 9/16;
+      box-shadow: 0 10px 30px rgba(13,27,75,0.12);
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .ai-phone-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(13,27,75,0.18);
+    }
+    .ai-phone-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .ai-feature-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(13,27,75,0.08);
+      border-radius: 18px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 4px 24px rgba(13,27,75,0.04);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .ai-feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(13,27,75,0.09);
+    }
+
     /* ---------- CTA section ---------- */
     #partner { background: #0D1B4B; padding: 6rem 0 5rem; }
     .cta-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; text-align: center; }
@@ -239,7 +273,7 @@
 <!-- ═══════════════ NAVBAR ═══════════════ -->
 <nav id="navbar">
   <div class="nav-inner">
-    <!-- Navbar Logo: Displays full high-resolution logo -->
+    <!-- Navbar Logo -->
     <a href="#hero" style="display:flex; align-items:center; text-decoration:none;">
       <img src="logo.png" alt="Eutinol" style="height:38px; width:auto; object-fit:contain;" />
     </a>
@@ -247,6 +281,8 @@
       <a href="#crisis">The Crisis</a>
       <a href="#gel">The Gel</a>
       <a href="#science">Science</a>
+      <!-- New AI Navigation Item -->
+      <a href="#ai">AI</a>
       <a href="javascript:void(0);" onclick="document.getElementById('wp-modal').style.display='flex';">White Paper</a>
       <a href="#clinicians">Clinicians</a>
     </div>
@@ -507,7 +543,6 @@
       </div>
 
       <div class="card reveal d2" style="border-radius:20px;background:#FAFBFD;">
-        <!-- Card Logo: Uses the high-resolution logo directly -->
         <div style="margin-bottom:1.25rem;">
           <img src="logo.png" alt="Eutinol" style="height:32px; width:auto; object-fit:contain;" />
         </div>
@@ -525,8 +560,106 @@
   <div class="s-rule"></div>
 </section>
 
-<!-- ═══════════════ SECTION 5: CLINICIANS ═══════════════ -->
-<section id="clinicians" class="dot-bg" style="background:#F7F8FC;">
+<!-- ═══════════════ SECTION 5: AI COMPANION (MIMI AI) ═══════════════ -->
+<section id="ai" class="dot-bg" style="background:#F7F8FC;">
+  <div class="sec-inner">
+    <div class="sec-header reveal">
+      <div class="tag">The AI Companion</div>
+      <h2 class="sec-h2">Meet Mimi AI —<br>the wound that measures itself.</h2>
+      <p class="sec-lead">AI-guided wound intelligence that turns smartphones into clinical-grade assessment devices, closing the loop between active treatment and objective recovery.</p>
+    </div>
+
+    <!-- Main Grid: 4 Pipeline Steps (Left) + 3 Core AI Purposes (Right) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left: 4 Phone Mockup Screens -->
+      <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-4 reveal d1">
+        
+        <!-- Screen 1 -->
+        <div class="flex flex-col items-center">
+          <div class="ai-phone-card w-full">
+            <img src="1.png" alt="Patient profile" onerror="this.onerror=null;this.src='1.jpg';" />
+          </div>
+          <div class="mt-3 text-center">
+            <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">01</span>
+            <p class="text-[0.82rem] font-bold text-[#0D1B4B]">Patient profile</p>
+          </div>
+        </div>
+
+        <!-- Screen 2 -->
+        <div class="flex flex-col items-center">
+          <div class="ai-phone-card w-full">
+            <img src="2.png" alt="One-tap scan" onerror="this.onerror=null;this.src='2.jpg';" />
+          </div>
+          <div class="mt-3 text-center">
+            <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">02</span>
+            <p class="text-[0.82rem] font-bold text-[#0D1B4B]">One-tap scan</p>
+          </div>
+        </div>
+
+        <!-- Screen 3 -->
+        <div class="flex flex-col items-center">
+          <div class="ai-phone-card w-full">
+            <img src="3.png" alt="Guided scanning" onerror="this.onerror=null;this.src='3.jpg';" />
+          </div>
+          <div class="mt-3 text-center">
+            <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">03</span>
+            <p class="text-[0.82rem] font-bold text-[#0D1B4B]">Guided scanning</p>
+          </div>
+        </div>
+
+        <!-- Screen 4 -->
+        <div class="flex flex-col items-center">
+          <div class="ai-phone-card w-full">
+            <img src="4.png" alt="Healing trends" onerror="this.onerror=null;this.src='4.jpg';" />
+          </div>
+          <div class="mt-3 text-center">
+            <span class="inline-block text-[0.68rem] font-extrabold uppercase tracking-wider text-[#2448B5] bg-blue-50 px-2 py-0.5 rounded-full mb-1">04</span>
+            <p class="text-[0.82rem] font-bold text-[#0D1B4B]">Healing trends</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Core AI Purposes -->
+      <div class="lg:col-span-5 flex flex-col gap-4 reveal d2">
+        
+        <!-- Purpose Card 1 -->
+        <div class="ai-feature-card">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-blue-100/60 flex items-center justify-center text-[#2448B5] font-extrabold text-sm">01</div>
+            <h3 class="text-base font-extrabold uppercase tracking-tight text-[#0D1B4B]">Objective Measurement</h3>
+          </div>
+          <p class="text-sm text-[#3D527A] leading-relaxed">Computes precise wound surface area (cm²) automatically from a single photo, eliminating ruler and human bias.</p>
+        </div>
+
+        <!-- Purpose Card 2 -->
+        <div class="ai-feature-card">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-blue-100/60 flex items-center justify-center text-[#2448B5] font-extrabold text-sm">02</div>
+            <h3 class="text-base font-extrabold uppercase tracking-tight text-[#0D1B4B]">Healing Tracked</h3>
+          </div>
+          <p class="text-sm text-[#3D527A] leading-relaxed">Aggregates longitudinal wound histories over every visit, providing instant regression curves and closure velocity indicators.</p>
+        </div>
+
+        <!-- Purpose Card 3 -->
+        <div class="ai-feature-card">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-blue-100/60 flex items-center justify-center text-[#2448B5] font-extrabold text-sm">03</div>
+            <h3 class="text-base font-extrabold uppercase tracking-tight text-[#0D1B4B]">Clinician-Ready</h3>
+          </div>
+          <p class="text-sm text-[#3D527A] leading-relaxed">Auto-compiles clinical grade PDF summaries and trends tailored for consulting physicians, clinics, and medical review boards.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="s-rule"></div>
+</section>
+
+<!-- ═══════════════ SECTION 6: CLINICIANS ═══════════════ -->
+<section id="clinicians" style="background:#fff;">
   <div class="sec-inner">
     <div class="sec-header reveal">
       <div class="tag">Clinical Adoption</div>
@@ -597,7 +730,7 @@
   <div class="s-rule"></div>
 </section>
 
-<!-- ═══════════════ SECTION 6: CTA ═══════════════ -->
+<!-- ═══════════════ SECTION 7: CTA ═══════════════ -->
 <section id="partner">
   <div class="cta-inner">
     <div class="reveal">
@@ -645,7 +778,7 @@
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
   <div class="footer-top">
-    <!-- Footer Logo: Wrapped in a white pill badge for clean contrast on dark background -->
+    <!-- Footer Logo -->
     <div style="display:inline-flex; align-items:center; background:#ffffff; padding:6px 14px; border-radius:10px;">
       <img src="logo.png" alt="Eutinol" style="height:28px; width:auto; object-fit:contain;" />
     </div>
