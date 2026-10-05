@@ -173,6 +173,7 @@
     .team-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.25rem; }
     .team-item { display: flex; align-items: center; gap: 14px; }
     .founder-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid #2448B5; flex-shrink: 0; box-shadow: 0 4px 10px rgba(13,27,75,.12); }
+    .institution-avatar { width: 46px; height: 46px; border-radius: 10px; object-fit: contain; background: #fff; border: 1.5px solid rgba(13,27,75,.1); padding: 3px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(13,27,75,.08); }
     .team-name { font-size: .88rem; font-weight: 800; color: #0D1B4B; }
     .team-role { font-size: .75rem; color: #697EAA; margin-top: 1px; }
 
@@ -313,7 +314,10 @@
       <a href="#whitepaper">White Paper</a>
       <a href="#clinicians">Clinicians</a>
     </div>
-    <a href="mailto:adnanmaruf625@gmail.com" class="btn-navy" id="nav-cta">
+    <!-- Direct Mailto with Explicit JS Fallback -->
+    <a href="mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol" 
+       onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol'; event.stopPropagation();" 
+       class="btn-navy" id="nav-cta">
       Partner With Us
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -339,7 +343,9 @@
         that reduces recovery time and prevents amputations — where traditional treatments fail.
       </p>
       <div class="hero-btns">
-        <a href="mailto:adnanmaruf625@gmail.com" id="hero-cta-primary" class="btn-navy" style="padding:14px 28px;font-size:.95rem;">
+        <a href="mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol" 
+           onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol'; event.stopPropagation();" 
+           id="hero-cta-primary" class="btn-navy" style="padding:14px 28px;font-size:.95rem;">
           Partner With Us
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -352,7 +358,7 @@
       </div>
     </div>
 
-    <!-- Right card with Product Photo -->
+    <!-- Right card with Product Photo (02.jpg) -->
     <div class="hero-card-wrap">
       <div style="position:relative;width:100%;max-width:400px;">
         <div class="hero-card">
@@ -580,6 +586,7 @@
         <h3 class="card-title" style="font-size:1.4rem;margin-top:.3rem;">Deep Tech Foundation</h3>
         <p class="card-body" style="margin-bottom:1.25rem;">Developed and validated by world-class researchers at Universiti Malaya with domain expertise in molecular pharmacology and translational wound science.</p>
         <div class="team-list">
+          <!-- Founder 1: Adnan Maruf (00.jpg) -->
           <div class="team-item">
             <img src="00.jpg" alt="Adnan Maruf" class="founder-avatar" />
             <div>
@@ -587,6 +594,7 @@
               <div class="team-role">Chief Executive Officer</div>
             </div>
           </div>
+          <!-- Founder 2: AP Dr. Nurshamimi (01.jpg) -->
           <div class="team-item">
             <img src="01.jpg" alt="AP Dr. Nurshamimi" class="founder-avatar" />
             <div>
@@ -594,10 +602,9 @@
               <div class="team-role">Chief Technology Officer &amp; Principal Investigator</div>
             </div>
           </div>
-          <div class="team-item" style="padding-left: 6px;">
-            <div style="width:34px;height:34px;border-radius:50%;background:rgba(13,27,75,.08);display:flex;align-items:center;justify-content:center;margin-right:4px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D1B4B" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
+          <!-- Institutional Partner: Universiti Malaya Logo (03.jpg) -->
+          <div class="team-item">
+            <img src="03.jpg" alt="Universiti Malaya" class="institution-avatar" />
             <div>
               <div class="team-name">Universiti Malaya</div>
               <div class="team-role">Institutional Research &amp; Commercialization Partner</div>
@@ -833,9 +840,7 @@
           </div>
         </div>
         <div class="cred-strip">
-          <div style="display:flex; align-items:center; flex-shrink:0; padding-right:0.5rem;">
-            <img src="logo.png" alt="Eutinol" style="height:26px; width:auto; object-fit:contain;" />
-          </div>
+          <img src="03.jpg" alt="Universiti Malaya" style="height:38px; width:auto; object-fit:contain; border-radius:6px; flex-shrink:0;" />
           <div>
             <div class="cred-name">Universiti Malaya Validated</div>
             <div class="cred-sub">Developed and validated by leading Malaysian biomedical researchers</div>
@@ -874,11 +879,18 @@
       </div>
 
       <div class="cta-btns">
-        <a href="mailto:adnanmaruf625@gmail.com" id="cta-partner" class="btn-white">
+        <!-- Direct Mailto with Explicit JS Fallback -->
+        <a href="mailto:adnanmaruf625@gmail.com?subject=Partner%20Clinic%20Inquiry%20-%20Eutinol" 
+           onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Partner%20Clinic%20Inquiry%20-%20Eutinol'; event.stopPropagation();" 
+           id="cta-partner" class="btn-white">
           Become a Partner Clinic
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#0D1B4B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="mailto:adnanmaruf625@gmail.com" id="cta-info" class="btn-ghost">Request Clinical Information</a>
+        <a href="mailto:adnanmaruf625@gmail.com?subject=Clinical%20Information%20Request%20-%20Eutinol" 
+           onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Clinical%20Information%20Request%20-%20Eutinol'; event.stopPropagation();" 
+           id="cta-info" class="btn-ghost">
+          Request Clinical Information
+        </a>
       </div>
 
       <div class="tag-cloud">
