@@ -86,12 +86,12 @@
     .trust-item label { font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #95A8C8; display: block; margin-bottom: 2px; }
     .trust-item span { font-size: .82rem; font-weight: 700; color: #0D1B4B; }
 
-    /* Hero card */
+    /* Hero card & Product Frame */
     .hero-card-wrap { display: flex; justify-content: flex-end; }
     .hero-card { background: #0D1B4B; border-radius: 28px; padding: 2.2rem; box-shadow: 0 30px 80px rgba(13,27,75,.35); position: relative; overflow: hidden; width: 100%; max-width: 400px; }
     .hero-card-blob { position: absolute; top: 0; right: 0; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.07), transparent); transform: translate(30%,-30%); }
-    .product-img-wrap { width: 100%; height: 180px; border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); margin-bottom: 1.5rem; position: relative; }
-    .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .product-img-box { width: 100%; height: 200px; border-radius: 18px; overflow: hidden; background: #081131; border: 1.5px solid rgba(255,255,255,0.15); margin-bottom: 1.5rem; position: relative; }
+    .product-img-box img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
     .stat-block { text-align: center; }
     .stat-block + .stat-block { border-top: 1px solid rgba(255,255,255,.09); margin-top: 1rem; padding-top: 1rem; }
     .stat-num { font-size: clamp(2.2rem,6vw,3.2rem); font-weight: 900; letter-spacing: -.04em; line-height: 1; color: #fff; }
@@ -167,14 +167,14 @@
     .icon-yes { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #0D1B4B; }
     .icon-no { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(13,27,75,.06); }
 
-    /* ---------- Patent & Team card ---------- */
+    /* ---------- Leadership / Team Avatars ---------- */
     .icon-shield { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
     .mono { font-family: monospace; font-size: .82rem; color: rgba(255,255,255,.42); margin-bottom: 1rem; }
     .team-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.25rem; }
     .team-item { display: flex; align-items: center; gap: 14px; }
-    .founder-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid #2448B5; flex-shrink: 0; box-shadow: 0 4px 10px rgba(13,27,75,.12); }
-    .institution-avatar { width: 46px; height: 46px; border-radius: 10px; object-fit: contain; background: #fff; border: 1.5px solid rgba(13,27,75,.1); padding: 3px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(13,27,75,.08); }
-    .team-name { font-size: .88rem; font-weight: 800; color: #0D1B4B; }
+    .avatar-circle { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2.5px solid #2448B5; flex-shrink: 0; box-shadow: 0 4px 12px rgba(13,27,75,.15); background: #eee; }
+    .logo-square { width: 50px; height: 50px; border-radius: 12px; object-fit: contain; background: #fff; border: 1.5px solid rgba(13,27,75,.12); padding: 4px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(13,27,75,.08); }
+    .team-name { font-size: .9rem; font-weight: 800; color: #0D1B4B; }
     .team-role { font-size: .75rem; color: #697EAA; margin-top: 1px; }
 
     /* ---------- Clinicians section ---------- */
@@ -191,8 +191,8 @@
     .check-item { display: flex; align-items: center; gap: 10px; }
     .check-circle { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .check-text { font-size: .84rem; color: rgba(255,255,255,.78); }
-    .cred-strip { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.4rem; border: 1.5px solid rgba(13,27,75,.09); border-radius: 16px; background: #fff; }
-    .cred-name { font-size: .85rem; font-weight: 800; color: #0D1B4B; }
+    .cred-strip { display: flex; align-items: center; gap: 1.2rem; padding: 1.1rem 1.4rem; border: 1.5px solid rgba(13,27,75,.09); border-radius: 16px; background: #fff; }
+    .cred-name { font-size: .88rem; font-weight: 800; color: #0D1B4B; }
     .cred-sub { font-size: .73rem; color: #95A8C8; }
 
     /* ---------- AI Section Mockups ---------- */
@@ -269,9 +269,9 @@
     .outcome-h { font-size: .9rem; font-weight: 800; color: #fff; margin-bottom: .5rem; }
     .outcome-p { font-size: .82rem; color: rgba(255,255,255,.58); line-height: 1.65; }
     .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .btn-white { display: inline-flex; align-items: center; gap: 8px; padding: 15px 30px; background: #fff; color: #0D1B4B; font-size: .95rem; font-weight: 700; border-radius: 999px; text-decoration: none; position: relative; overflow: hidden; transition: opacity .2s; }
+    .btn-white { display: inline-flex; align-items: center; gap: 8px; padding: 15px 30px; background: #fff; color: #0D1B4B; font-size: .95rem; font-weight: 700; border-radius: 999px; text-decoration: none; border: none; cursor: pointer; position: relative; overflow: hidden; transition: opacity .2s; }
     .btn-white:hover { opacity: .93; }
-    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 15px 30px; border: 1.5px solid rgba(255,255,255,.3); color: #fff; font-size: .95rem; font-weight: 600; border-radius: 999px; text-decoration: none; transition: background .2s; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 15px 30px; border: 1.5px solid rgba(255,255,255,.3); color: #fff; font-size: .95rem; font-weight: 600; border-radius: 999px; text-decoration: none; cursor: pointer; transition: background .2s; }
     .btn-ghost:hover { background: rgba(255,255,255,.07); }
     .tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
     .cloud-tag { font-size: .73rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,.07); color: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.1); }
@@ -314,13 +314,11 @@
       <a href="#whitepaper">White Paper</a>
       <a href="#clinicians">Clinicians</a>
     </div>
-    <!-- Direct Mailto with Explicit JS Fallback -->
-    <a href="mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol" 
-       onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol'; event.stopPropagation();" 
-       class="btn-navy" id="nav-cta">
+    <!-- Partner CTA with Guaranteed Event Trigger -->
+    <button onclick="openPartnerEmail('Navbar Partner Request');" class="btn-navy" id="nav-cta" type="button">
       Partner With Us
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+    </button>
   </div>
 </nav>
 
@@ -343,12 +341,10 @@
         that reduces recovery time and prevents amputations — where traditional treatments fail.
       </p>
       <div class="hero-btns">
-        <a href="mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol" 
-           onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Partnership%20Inquiry%20-%20Eutinol'; event.stopPropagation();" 
-           id="hero-cta-primary" class="btn-navy" style="padding:14px 28px;font-size:.95rem;">
+        <button onclick="openPartnerEmail('Hero Partner Request');" id="hero-cta-primary" class="btn-navy" style="padding:14px 28px;font-size:.95rem;" type="button">
           Partner With Us
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        </button>
         <a href="#gel" id="hero-cta-secondary" class="btn-outline" style="padding:14px 28px;font-size:.95rem;">Explore the Gel</a>
       </div>
       <div class="trust-strip">
@@ -364,9 +360,9 @@
         <div class="hero-card">
           <div class="hero-card-blob"></div>
 
-          <!-- Product Image Frame -->
-          <div class="product-img-wrap">
-            <img src="02.jpg" alt="Eutinol Topical Bioactive Gel" onerror="this.parentElement.style.display='none'" />
+          <!-- Product Image Container -->
+          <div class="product-img-box">
+            <img src="02.jpg" alt="Eutinol Topical Bioactive Gel" onerror="this.onerror=null; this.src='preview-image.png';" />
           </div>
 
           <div class="stat-block">
@@ -585,10 +581,11 @@
         <div class="card-label">Scientific Leadership</div>
         <h3 class="card-title" style="font-size:1.4rem;margin-top:.3rem;">Deep Tech Foundation</h3>
         <p class="card-body" style="margin-bottom:1.25rem;">Developed and validated by world-class researchers at Universiti Malaya with domain expertise in molecular pharmacology and translational wound science.</p>
+        
         <div class="team-list">
           <!-- Founder 1: Adnan Maruf (00.jpg) -->
           <div class="team-item">
-            <img src="00.jpg" alt="Adnan Maruf" class="founder-avatar" />
+            <img src="00.jpg" alt="Adnan Maruf" class="avatar-circle" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Adnan+Maruf&background=0D1B4B&color=fff';" />
             <div>
               <div class="team-name">Adnan Maruf</div>
               <div class="team-role">Chief Executive Officer</div>
@@ -596,21 +593,22 @@
           </div>
           <!-- Founder 2: AP Dr. Nurshamimi (01.jpg) -->
           <div class="team-item">
-            <img src="01.jpg" alt="AP Dr. Nurshamimi" class="founder-avatar" />
+            <img src="01.jpg" alt="AP Dr. Nurshamimi Nor Rashid" class="avatar-circle" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nurshamimi+Rashid&background=0D1B4B&color=fff';" />
             <div>
               <div class="team-name">AP Dr. Nurshamimi Nor Rashid</div>
               <div class="team-role">Chief Technology Officer &amp; Principal Investigator</div>
             </div>
           </div>
-          <!-- Institutional Partner: Universiti Malaya Logo (03.jpg) -->
+          <!-- Institutional Partner: Universiti Malaya (03.jpg) -->
           <div class="team-item">
-            <img src="03.jpg" alt="Universiti Malaya" class="institution-avatar" />
+            <img src="03.jpg" alt="Universiti Malaya" class="logo-square" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Universiti+Malaya&background=fff&color=0D1B4B';" />
             <div>
               <div class="team-name">Universiti Malaya</div>
               <div class="team-role">Institutional Research &amp; Commercialization Partner</div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -626,7 +624,6 @@
       <p class="sec-lead">AI-guided wound intelligence that turns smartphones into clinical-grade assessment devices, closing the loop between active treatment and objective recovery.</p>
     </div>
 
-    <!-- Main Grid: 4 Pipeline Steps (Left) + 3 Core AI Purposes (Right) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       
       <!-- Left: 4 Phone Mockup Screens -->
@@ -680,8 +677,6 @@
 
       <!-- Right: Core AI Purposes -->
       <div class="lg:col-span-5 flex flex-col gap-4 reveal d2">
-        
-        <!-- Purpose Card 1 -->
         <div class="ai-feature-card">
           <div class="flex items-center gap-3 mb-2">
             <div class="w-8 h-8 rounded-lg bg-blue-100/60 flex items-center justify-center text-[#2448B5] font-extrabold text-sm">01</div>
@@ -690,7 +685,6 @@
           <p class="text-sm text-[#3D527A] leading-relaxed">Computes precise wound surface area (cm²) automatically from a single photo, eliminating ruler and human bias.</p>
         </div>
 
-        <!-- Purpose Card 2 -->
         <div class="ai-feature-card">
           <div class="flex items-center gap-3 mb-2">
             <div class="w-8 h-8 rounded-lg bg-blue-100/60 flex items-center justify-center text-[#2448B5] font-extrabold text-sm">02</div>
@@ -699,7 +693,6 @@
           <p class="text-sm text-[#3D527A] leading-relaxed">Aggregates longitudinal wound histories over every visit, providing instant regression curves and closure velocity indicators.</p>
         </div>
 
-        <!-- Purpose Card 3 -->
         <div class="ai-feature-card">
           <div class="flex items-center gap-3 mb-2">
             <div class="w-8 h-8 rounded-lg bg-blue-100/60 flex items-center justify-center text-[#2448B5] font-extrabold text-sm">03</div>
@@ -707,7 +700,6 @@
           </div>
           <p class="text-sm text-[#3D527A] leading-relaxed">Auto-compiles clinical grade PDF summaries and trends tailored for consulting physicians, clinics, and medical review boards.</p>
         </div>
-
       </div>
 
     </div>
@@ -752,7 +744,7 @@
           </div>
         </div>
 
-        <!-- Right: 4 Therapeutic Pillars -->
+        <!-- Right: 4 Pillars -->
         <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="p-4 rounded-xl bg-white/5 border border-white/10">
             <div class="text-[#7B9CF0] text-xs font-extrabold tracking-widest uppercase mb-1">Pillar 01</div>
@@ -840,7 +832,7 @@
           </div>
         </div>
         <div class="cred-strip">
-          <img src="03.jpg" alt="Universiti Malaya" style="height:38px; width:auto; object-fit:contain; border-radius:6px; flex-shrink:0;" />
+          <img src="03.jpg" alt="Universiti Malaya" style="height:42px; width:auto; max-width:80px; object-fit:contain; border-radius:6px; flex-shrink:0;" onerror="this.style.display='none';" />
           <div>
             <div class="cred-name">Universiti Malaya Validated</div>
             <div class="cred-sub">Developed and validated by leading Malaysian biomedical researchers</div>
@@ -879,18 +871,13 @@
       </div>
 
       <div class="cta-btns">
-        <!-- Direct Mailto with Explicit JS Fallback -->
-        <a href="mailto:adnanmaruf625@gmail.com?subject=Partner%20Clinic%20Inquiry%20-%20Eutinol" 
-           onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Partner%20Clinic%20Inquiry%20-%20Eutinol'; event.stopPropagation();" 
-           id="cta-partner" class="btn-white">
+        <button onclick="openPartnerEmail('Partner Clinic Program Inquiry');" id="cta-partner" class="btn-white" type="button">
           Become a Partner Clinic
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#0D1B4B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="mailto:adnanmaruf625@gmail.com?subject=Clinical%20Information%20Request%20-%20Eutinol" 
-           onclick="window.location.href='mailto:adnanmaruf625@gmail.com?subject=Clinical%20Information%20Request%20-%20Eutinol'; event.stopPropagation();" 
-           id="cta-info" class="btn-ghost">
+        </button>
+        <button onclick="openPartnerEmail('Clinical Information Request');" id="cta-info" class="btn-ghost" type="button">
           Request Clinical Information
-        </a>
+        </button>
       </div>
 
       <div class="tag-cloud">
@@ -1038,6 +1025,16 @@
 
 <!-- ═══════════════ JS ═══════════════ -->
 <script>
+  // Bulletproof Partner Email Trigger
+  function openPartnerEmail(subjectContext) {
+    const email = 'adnanmaruf625@gmail.com';
+    const subject = encodeURIComponent((subjectContext || 'Clinical Partnership Inquiry') + ' - Eutinol');
+    const body = encodeURIComponent('Hello Eutinol Team,\n\nI would like to inquire about clinical partnerships and opportunities with Eutinol.\n\nBest regards,');
+    
+    // Direct browser redirect to system mail client
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  }
+
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
